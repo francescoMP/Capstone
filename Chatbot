@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Asistente Virtual</title>
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #F4F6F8;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Arial;
+      --df-messenger-chat-background: #A2CADF;
+      --df-messenger-message-user-background: #FFFFFF;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 16px;
+      right: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido al Asistente Virtual de Camanchaca</h1>
+  
+  <!-- Chatbot de Dialogflow -->
+  <df-messenger
+    project-id="presentacionchatbot"
+    agent-id="930ecf76-67e4-4852-bc3c-34748e262525"
+    language-code="es"
+    max-query-length="-1">
+    <df-messenger-chat-bubble chat-title="Asistente Virtual">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+  
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+</body>
+</html>
